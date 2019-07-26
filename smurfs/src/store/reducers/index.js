@@ -13,7 +13,7 @@ const initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_SMURFS_START:
-      console.log("In FETCH_START!");
+      //   console.log("In FETCH_START!");
       return {
         ...state,
         error: "",
@@ -21,7 +21,7 @@ function reducer(state = initialState, action) {
         smurfs: []
       };
     case FETCH_SMURFS_SUCCESS:
-      console.log("In FETCH_SUCCESS!");
+      //   console.log("In FETCH_SUCCESS!");
       return {
         ...state,
         error: "",
@@ -29,7 +29,7 @@ function reducer(state = initialState, action) {
         smurfs: action.payload
       };
     case FETCH_SMURFS_FAILURE:
-      console.log("In FETCH_FAILURE!");
+      //   console.log("In FETCH_FAILURE!");
       return {
         ...state,
         error: true,

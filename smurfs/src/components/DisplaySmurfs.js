@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getSmurfs } from "../store/actions";
 
+import SmurfCard from "./SmurfCard";
+
 export default function DisplaySmurfs() {
   const smurfs = useSelector(state => state.smurfs);
   const dispatch = useDispatch();
@@ -11,16 +13,19 @@ export default function DisplaySmurfs() {
   }, [dispatch]);
 
   if (!smurfs) {
-    return <p>Loading...</p>;
+    return (
+      <p>
+        Smurf Village is empty! <br />
+        Add a smurf!
+      </p>
+    );
   }
 
   return (
     <div>
       {smurfs.map(smurf => {
-        return <div>{smurf.name}</div>;
+        return <SmurfCard smurf={smurf} key={smurf.id} />;
       })}
     </div>
   );
-
-  return <div>Hello</div>;
 }

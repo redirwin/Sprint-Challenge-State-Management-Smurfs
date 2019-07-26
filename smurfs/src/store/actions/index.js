@@ -5,16 +5,16 @@ export const FETCH_SMURFS_SUCCESS = "FETCH_SMURFS_SUCCESS";
 export const FETCH_SMURFS_FAILURE = "FETCH_SMURFS_FAILURE";
 
 export const getSmurfs = () => dispatch => {
-  console.log("In action!");
+  //   console.log("In action!");
   dispatch({ type: FETCH_SMURFS_START });
   axios
     .get("http://localhost:3333/smurfs")
     .then(res => {
-      console.log(res.data);
+      //   console.log(res.data);
       dispatch({ type: FETCH_SMURFS_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log(err);
+      //   console.log(err);
       dispatch({ type: FETCH_SMURFS_FAILURE, payload: err });
     });
 };
