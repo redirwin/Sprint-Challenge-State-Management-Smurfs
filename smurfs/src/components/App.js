@@ -1,16 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Welcome to your state management version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
-      </div>
-    );
-  }
-}
+import React from "react";
+import "../styles/App.css";
 
-export default App;
+// styling
+import Container from "@material-ui/core/Container";
+
+// app components
+import DisplaySmurfs from "./DisplaySmurfs";
+import Header from "../ui/Header";
+
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Container maxWidth="md">
+        <DisplaySmurfs />
+      </Container>
+    </>
+  );
+}
