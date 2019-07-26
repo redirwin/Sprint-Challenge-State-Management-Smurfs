@@ -8,7 +8,19 @@ export default function DisplaySmurfs() {
 
   useEffect(() => {
     dispatch(getSmurfs());
-  }, [smurfs]);
+  }, [dispatch]);
+
+  if (!smurfs) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div>
+      {smurfs.map(smurf => {
+        return <div>{smurf.name}</div>;
+      })}
+    </div>
+  );
 
   return <div>Hello</div>;
 }
