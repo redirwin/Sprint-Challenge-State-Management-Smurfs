@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <DisplaySmurfs />
       </Container>
     </>

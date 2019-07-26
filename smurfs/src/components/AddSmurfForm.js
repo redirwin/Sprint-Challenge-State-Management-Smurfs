@@ -1,5 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { withFormik, Form, Field } from "formik";
+
 import * as Yup from "yup";
 
 import { addSmurf } from "../store/actions";
@@ -21,7 +23,7 @@ function AddSmurfForm({ touched, errors }) {
           <Field
             className="input"
             name="age"
-            type="text"
+            type="number"
             placeholder="Age"
             autoComplete="off"
           />
@@ -30,7 +32,7 @@ function AddSmurfForm({ touched, errors }) {
           <Field
             className="input"
             name="height"
-            type="text"
+            type="number"
             placeholder="Height"
             autoComplete="off"
           />
@@ -69,7 +71,7 @@ export default withFormik({
   }),
 
   handleSubmit(values, formikBag) {
-    console.log(formikBag.props);
+    console.log(values);
     formikBag.resetForm();
     formikBag.props.dispatch(addSmurf(values));
   }
