@@ -1,7 +1,6 @@
 import React from "react";
 
 export default props => {
-  console.log(props);
   return (
     <section>
       <h3>{props.smurf.name}</h3>

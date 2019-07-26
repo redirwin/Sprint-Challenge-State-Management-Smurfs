@@ -47,21 +47,11 @@ export default withFormik({
     return {
       name: "",
       age: "",
-      email: ""
+      height: ""
     };
   },
-
-  //   validationSchema: Yup.object().shape({
-  //     name: Yup.string()
-  //       .required("Name is required.")
-  //       .min(2, "Name is required."),
-  //     age: Yup.string(),
-  //     email: Yup.string()
-  //       .required("Email is required.")
-  //       .email("Email is not valid.")
-  //   }),
-
   handleSubmit(values, formikBag) {
+    console.log(formikBag.props);
     formikBag.props.dispatch(addSmurf(values));
   }
 })(AddSmurfForm);

@@ -29,7 +29,7 @@ export default function DisplaySmurfs() {
     <div>
       <AddSmurf />
       {smurfs.map(smurf => {
-        return <SmurfCard smurf={smurf} key={smurf.name} />;
+        return <SmurfCard smurf={smurf} key={smurf.id} />;
       })}
     </div>
   );
