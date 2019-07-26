@@ -1,15 +1,12 @@
-import React, { Component } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import "../styles/App.css";
-function App() {
-  const smurfs = useSelector(state => state.smurfs);
-  const dispatch = useDispatch();
 
+import DisplaySmurfs from "./DisplaySmurfs";
+
+export default function App() {
   return (
     <div className="App">
-      <p>Smurf Village</p>
+      <DisplaySmurfs />
     </div>
   );
 }
-
-export default App;

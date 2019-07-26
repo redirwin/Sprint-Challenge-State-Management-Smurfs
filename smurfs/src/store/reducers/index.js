@@ -1,4 +1,4 @@
-import { FETCH_SMURF_START } from "../actions/";
+import { FETCH_SMURFS_START } from "../actions/";
 
 const initialState = {
   error: "",
@@ -8,7 +8,8 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_SMURF_START:
+    case FETCH_SMURFS_START:
+      console.log("In reducer!");
       return state;
     default:
       return state;
